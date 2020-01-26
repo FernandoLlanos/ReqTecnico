@@ -1,6 +1,8 @@
 # Requerimiento Técnico
 
 Test de Req Técnico FullStack .NET / Angular 8.
+Demo Test desplegado en AWS: http://ec2-3-16-215-35.us-east-2.compute.amazonaws.com/
+
 Carpetas disponibles:
 
   - BackEnd (.NET)
