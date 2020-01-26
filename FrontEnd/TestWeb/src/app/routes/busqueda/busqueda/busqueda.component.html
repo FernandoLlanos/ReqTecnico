@@ -1,0 +1,81 @@
+<div class="content-heading">Califica tu Servicio</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <!-- Aside card-->
+        <div class="card b">
+            <div class="card-body bb">
+                <strong>Registro de Calificación</strong> 
+            </div>
+            <div class="card-body">
+                <form role="form" [formGroup]="valFormBusqueda" (ngSubmit)="listarEvaluacionPorRangoFechas();">
+                    <div class="form-group">
+                        <label class="text-bold">Correo Electrónico</label>
+                        <input class="form-control" type="email" placeholder="Ingrese Correo Electrónico" formControlName="frmCorreoElectronico"/>
+                        <span class="text-danger"
+                        *ngIf="valFormBusqueda.get('frmCorreoElectronico').hasError('required') && (valFormBusqueda.get('frmCorreoElectronico').dirty || valFormBusqueda.get('frmCorreoElectronico').touched)">*Campo
+                        requerido.</span>
+                        <span class="text-danger" *ngIf="valFormBusqueda.controls['frmCorreoElectronico'].hasError('email') && (valFormBusqueda.controls['frmCorreoElectronico'].dirty || valFormBusqueda.controls['frmCorreoElectronico'].touched)">*Formato
+                                                        de correo electrónico no es válido</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-bold">Rango de Fechas</label>
+                        <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [bsConfig]="bsConfig" formControlName="frmFecha">
+
+                        <span class="text-danger"
+                        *ngIf="valFormBusqueda.get('frmFecha').hasError('required') && (valFormBusqueda.get('frmFecha').dirty || valFormBusqueda.get('frmFecha').touched)">*Campo
+                        requerido.</span>
+                    </div>
+                    <div class="text-center"><button class="btn btn-sm btn-primary" type="submit">Buscar</button></div>
+                </form>
+            </div>
+        </div>
+        <!-- end Aside card-->
+    </div>
+    <div class="col-lg-8">
+        <div class="card b">
+            <div class="card-body">
+                <div *ngIf="!blOcultar">
+                    <div class="col-lg-12 col-md-12  text-center">
+                        <div class="text-muted text-md">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="text-info">
+                            <div class="text-info text-sm">No hay datos que mostrar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive" *ngIf="blOcultar">
+                    <table class="table w-100">
+                        <thead>
+                            <tr>
+                                <th>#ID</th>
+                                <th>Nombre Completo</th>
+                                <th>Correo Electrónico</th>
+                                <th>Fecha de Creación</th>
+                                <th>Calificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let calificacion of lstEvaluacion">
+                                <td>{{calificacion.intIdEvaluacion}}</td>
+                                <td>
+                                    {{calificacion.strNombreCompleto}}
+                                </td>
+                                <td>
+                                    {{calificacion.strCorreoElectronico}}
+                                </td>
+                                <td>
+                                   {{calificacion.dtFechaCreacion | date: 'dd/MM/yyyy h:mm:ss a'}}
+                                </td>
+                                <td>
+                                    <rating [(ngModel)]="calificacion.intCalificacion" style="color: #0275d8;font-size: 20px;" [max]="maxRat" [readonly]="true" rating="5" [titles]="['one','two','three']" stateOn="fa fa-star text-yellow" stateOff="far fa-star"></rating>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
