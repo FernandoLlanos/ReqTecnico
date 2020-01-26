@@ -41,7 +41,7 @@ $ npm start
 ```
 Abrir un navegador web la siguiente URL: http://localhost:4200
 
-### BackEnd
+### BackEnd(RestFul)
 
 * Abrir la solución slnBackEnd.sln del proyecto ubicado en la ruta: BackEnd/slnBackEnd 
 * Compilar y ejecutar
