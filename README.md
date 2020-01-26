@@ -46,6 +46,7 @@ Abrir un navegador web la siguiente URL: http://localhost:4200
 * Abrir la solución slnBackEnd.sln del proyecto ubicado en la ruta: BackEnd/slnBackEnd 
 * Compilar y ejecutar
 * los servicios rest serán accesibles desde la url: http://localhost:5000
+* Para cambiar la cadena de conexión de la base de datos, debe ser desde la capa Infraestructura/Util/Conexion.cs
 
 
 ### Documentación de WEB API mediante Swagger
