@@ -30,6 +30,53 @@ Abrir la carpeta BD/Scripts y ejecutar los scripts en el orden indicado:
  2. Store Procedure.sql
 ### FrontEnd
 Abrir la carpeta FrontEnd/WebTest o posicionarse en ese nivel con el terminal integrado de visual studio code.
+Estructura del proyecto:
+
+```sh
++---dist
++---e2e
++---node_modules
++---src
+    +---app
+    |   +---core
+    |   |   +---menu
+    |   |   +---preloader
+    |   |   +---settings
+    |   |   +---themes
+    |   |   +---translator
+    |   +---layout
+    |   |   +---footer
+    |   |   +---header
+    |   |   |   +---navsearch
+    |   |   +---offsidebar
+    |   |   +---sidebar
+    |   |       +---userblock
+    |   +---routes
+    |   |   +---home
+    |   |   |   +---home
+  	|   |   +---busqueda
+    |   |   |   +---busqueda
+    |   +---shared
+    |       +---colors
+    |       +---directives
+    |       |   +---checkall
+    |       |   +---easypiechart
+    |       |   +---flot
+    |       |   +---jqcloud
+    |       |   +---now
+    |       |   +---scrollable
+    |       |   +---sparkline
+    |       |   +---vectormap
+    |       +---styles
+    |           +---app
+    |           +---bootstrap
+    |           +---themes
+    +---assets
+    |   +---i18n
+    |   +---img
+    |   +---server
+    +---environments
+```
 
 Descargar las dependencias y librerias mediante el npm.
 
