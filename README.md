@@ -42,6 +42,8 @@ Abrir la carpeta FrontEnd/WebTest o posicionarse en ese nivel con el terminal in
     |   |   +---preloader
     |   |   +---settings
     |   |   +---themes
+    |   |   +---services
+    |   |   +---models
     |   |   +---translator
     |   +---layout
     |   |   +---footer
@@ -53,7 +55,7 @@ Abrir la carpeta FrontEnd/WebTest o posicionarse en ese nivel con el terminal in
     |   +---routes
     |   |   +---home
     |   |   |   +---home
-|   |   +---busqueda
+    |   +---busqueda
     |   |   |   +---busqueda
     |   +---shared
     |       +---colors
