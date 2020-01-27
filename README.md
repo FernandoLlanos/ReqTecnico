@@ -56,5 +56,13 @@ Abrir un navegador web la siguiente URL: http://localhost:4200
 Para mas referencia: https://swagger.io/tools/swagger-ui/
 Para ver los servicios publicados mediante esta herramienta será accesible desde: http://localhost:5000/swagger
 
+### Indicaciones sobre el desarrollo.
+* Se creó dos tablas TBL_Peronas y TBL_Evaluacion que son la cabecera y detalle, cuando se registra la primera calificación se graba los datos de la persona y su calificación en las tablas correspondientes, a la segunda vez solo guarda en la tabla detalle, para verificar si el usuario ya fue registrado se utiliza el correo electrónico.
+
+* Dentro de la solución del proyecto BackEnd se creó un proyecto un Web API para exponer los servicios RestFul(por comodidad y mejor integración con proyectos angular se utilizaron estos servicios para la integracion con el proyecyo FrontEnd)98.
+
+* Se creó un proyecto WCF para crear servicios SOAP pero no son consumidos en el proyecto FrontEnd.
+
+* Se desarrollaron pruebas unitarias basicas a los servicios construidos.
 
 
