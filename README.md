@@ -30,7 +30,6 @@ Abrir la carpeta BD/Scripts y ejecutar los scripts en el orden indicado:
  2. Store Procedure.sql
 ### FrontEnd
 Abrir la carpeta FrontEnd/WebTest o posicionarse en ese nivel con el terminal integrado de visual studio code.
-Estructura del proyecto:
 
 ```sh
 +---dist
@@ -54,7 +53,7 @@ Estructura del proyecto:
     |   +---routes
     |   |   +---home
     |   |   |   +---home
-  	|   |   +---busqueda
+|   |   +---busqueda
     |   |   |   +---busqueda
     |   +---shared
     |       +---colors
